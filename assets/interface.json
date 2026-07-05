@@ -25,7 +25,7 @@
                 "window_regex": "logres_andapp",
                 // 截图及控制方式，请根据项目实际情况修改
                 // 文档: https://maafw.xyz/docs/2.4-ControlMethods
-                "screencap": "MaaWin32ScreencapMethod_Background", // 截图方式
+                "screencap": "FramePool", // 截图方式
                 "mouse": "SendMessage", // 鼠标控制方式
                 "keyboard": "PostMessage" // 键盘控制方式
             }
