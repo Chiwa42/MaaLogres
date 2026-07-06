@@ -125,7 +125,7 @@
             "type": "FeatureMatch",
             "param": {
                 "template": [
-                    " daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
                 ]
             }
         },
@@ -230,7 +230,7 @@
             }
         }
     },
-    "daily_common_start": {
+    "daily_common_entry": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -240,10 +240,10 @@
             }
         },
         "next": [
-            "click: quest_board_common"
+            "click: quest_board_entry"
         ]
     },
-    "click: quest_board_common": {
+    "click: quest_board_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -256,13 +256,13 @@
             "type": "Click"
         },
         "next": [
-            "click: event_category_common"
+            "click: event_category_entry"
         ],
         "on_error": [
-            "click: event_category_common"
+            "click: event_category_entry"
         ]
     },
-    "click: event_category_common": {
+    "click: event_category_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -275,12 +275,12 @@
             "type": "Click"
         },
         "next": [
-            "daily_start_v2",
-            "time_limited_start",
-            "special_start"
+            "daily_category_entry",
+            "time_limited_entry",
+            "special_entry"
         ]
     },
-    "daily_start_v2": {
+    "daily_category_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -293,10 +293,10 @@
             "type": "Click"
         },
         "next": [
-            "click: daily_lesson_choice"
+            "click: daily_lesson_choice_entry"
         ]
     },
-    "click: daily_lesson_choice": {
+    "click: daily_lesson_choice_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -309,11 +309,11 @@
             "type": "Click"
         },
         "next": [
-            "click: daily_lesson_war_god",
-            "click: daily_lesson_training"
+            "click: daily_lesson_war_god_entry",
+            "click: daily_lesson_training_entry"
         ]
     },
-    "click: daily_lesson_war_god": {
+    "click: daily_lesson_war_god_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -326,10 +326,10 @@
             "type": "Click"
         },
         "next": [
-            "click: yes_v2"
+            "click: yes_entry"
         ]
     },
-    "click: daily_lesson_training": {
+    "click: daily_lesson_training_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -342,10 +342,10 @@
             "type": "Click"
         },
         "next": [
-            "click: yes_v2"
+            "click: yes_entry"
         ]
     },
-    "time_limited_start": {
+    "time_limited_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -358,10 +358,10 @@
             "type": "Click"
         },
         "next": [
-            "click: go_v2"
+            "click: go_entry"
         ]
     },
-    "special_start": {
+    "special_entry": {
         "recognition": {
             "type": "FeatureMatch",
             "param": {
@@ -374,10 +374,10 @@
             "type": "Click"
         },
         "next": [
-            "click: go_v2"
+            "click: go_entry"
         ]
     },
-    "click: yes_v2": {
+    "click: yes_entry": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -390,10 +390,10 @@
             "type": "Click"
         },
         "next": [
-            "click: go_v2"
+            "click: go_entry"
         ]
     },
-    "click: go_v2": {
+    "click: go_entry": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
