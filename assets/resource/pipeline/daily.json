@@ -1,0 +1,233 @@
+{
+    "$__mpe_config_新建Pipeline1": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filename": "新建Pipeline1",
+            "prefix": "",
+            "savedViewport": {
+                "x": -114,
+                "y": 52,
+                "zoom": 1.04
+            },
+            "version": "v1.7.3"
+        }
+    },
+    "click: go": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 92
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "template": [
+                    "go.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: yes": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 74
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "yes.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: あうらの稽古": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 45
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: もどる": {
+        "$__mpe_code": {
+            "position": {
+                "x": 630,
+                "y": 147
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: イベント"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "back.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: イベント": {
+        "$__mpe_code": {
+            "position": {
+                "x": 919,
+                "y": 42
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: デイリー"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "event_category.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: クエストボード": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 65
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: イベント"
+        ],
+        "on_error": [
+            "click: もどる"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "quest_board.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: デイリー": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 81
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: 爽やか！あうらレッスン"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "daily/daily_category.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: 武神あうらの特訓": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 301
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "click: 爽やか！あうらレッスン": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 63
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: 武神あうらの特訓",
+            "click: あうらの稽古"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
+    },
+    "daily_start": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 78
+            }
+        },
+        "next": [
+            "click: クエストボード"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "城下町"
+                ]
+            },
+            "type": "OCR"
+        }
+    }
+}
