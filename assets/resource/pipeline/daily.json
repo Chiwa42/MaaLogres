@@ -1,13 +1,17 @@
 {
-    "$__mpe_config_新建Pipeline1": {
+    "$__mpe_config_daily": {
         "$__mpe_code": {
             "coordinateMode": "absolute-v1",
-            "filename": "新建Pipeline1",
+            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
+            "filename": "daily",
+            "isDeleted": true,
+            "isModifiedExternally": false,
+            "lastSyncTime": 1783352506191,
             "prefix": "",
             "savedViewport": {
-                "x": -114,
-                "y": 52,
-                "zoom": 1.04
+                "x": 26,
+                "y": -382,
+                "zoom": 0.81
             },
             "version": "v1.7.3"
         }
@@ -15,8 +19,8 @@
     "click: go": {
         "$__mpe_code": {
             "position": {
-                "x": 2572,
-                "y": 92
+                "x": 2252,
+                "y": 74
             }
         },
         "action": {
@@ -24,6 +28,12 @@
         },
         "recognition": {
             "param": {
+                "roi": [
+                    300,
+                    680,
+                    123,
+                    49
+                ],
                 "template": [
                     "go.png"
                 ]
@@ -34,8 +44,8 @@
     "click: yes": {
         "$__mpe_code": {
             "position": {
-                "x": 2252,
-                "y": 74
+                "x": 1932,
+                "y": 55
             }
         },
         "action": {
@@ -46,6 +56,12 @@
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    100,
+                    481,
+                    123,
+                    47
+                ],
                 "template": [
                     "yes.png"
                 ]
@@ -56,8 +72,8 @@
     "click: あうらの稽古": {
         "$__mpe_code": {
             "position": {
-                "x": 1932,
-                "y": 45
+                "x": 1612,
+                "y": 346
             }
         },
         "action": {
@@ -68,40 +84,53 @@
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    168,
+                    301,
+                    237,
+                    40
+                ],
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
     "click: もどる": {
         "$__mpe_code": {
             "position": {
-                "x": 630,
-                "y": 147
+                "x": 972,
+                "y": 391
             }
         },
         "action": {
             "type": "Click"
         },
+        "max_hit": 3,
         "next": [
             "click: イベント"
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    10,
+                    89,
+                    58,
+                    44
+                ],
                 "template": [
                     "back.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
     "click: イベント": {
         "$__mpe_code": {
             "position": {
-                "x": 919,
-                "y": 42
+                "x": 652,
+                "y": 360
             }
         },
         "action": {
@@ -110,8 +139,17 @@
         "next": [
             "click: デイリー"
         ],
+        "on_error": [
+            "click: もどる"
+        ],
         "recognition": {
             "param": {
+                "roi": [
+                    66,
+                    52,
+                    102,
+                    58
+                ],
                 "template": [
                     "event_category.png"
                 ]
@@ -123,32 +161,63 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 65
+                "y": 651
             }
         },
         "action": {
             "type": "Click"
         },
+        "max_hit": 5,
         "next": [
             "click: イベント"
         ],
         "on_error": [
-            "click: もどる"
+            "click: クエストボード_retry"
         ],
         "recognition": {
             "param": {
                 "template": [
-                    "quest_board.png"
+                    "quest_board.png",
+                    "quest_board_2.png"
                 ]
             },
             "type": "FeatureMatch"
-        }
+        },
+        "timeout": 5000
+    },
+    "click: クエストボード_retry": {
+        "$__mpe_code": {
+            "position": {
+                "x": 610,
+                "y": 729
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "max_hit": 2,
+        "next": [
+            "click: クエストボード"
+        ],
+        "on_error": [
+            "giveup"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "quest_board.png",
+                    "quest_board_2.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        },
+        "timeout": 5000
     },
     "click: デイリー": {
         "$__mpe_code": {
             "position": {
-                "x": 1292,
-                "y": 81
+                "x": 972,
+                "y": 59
             }
         },
         "action": {
@@ -159,6 +228,12 @@
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    23,
+                    132,
+                    100,
+                    45
+                ],
                 "template": [
                     "daily/daily_category.png"
                 ]
@@ -169,8 +244,8 @@
     "click: 武神あうらの特訓": {
         "$__mpe_code": {
             "position": {
-                "x": 1932,
-                "y": 301
+                "x": 1612,
+                "y": 12
             }
         },
         "action": {
@@ -181,18 +256,24 @@
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    167,
+                    223,
+                    236,
+                    55
+                ],
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
     "click: 爽やか！あうらレッスン": {
         "$__mpe_code": {
             "position": {
-                "x": 1612,
-                "y": 63
+                "x": 1292,
+                "y": 48
             }
         },
         "action": {
@@ -204,30 +285,39 @@
         ],
         "recognition": {
             "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
     "daily_start": {
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 78
+                "y": 722
             }
         },
         "next": [
             "click: クエストボード"
         ],
-        "recognition": {
-            "param": {
-                "expected": [
-                    "城下町"
-                ]
-            },
-            "type": "OCR"
-        }
+        "timeout": 5000
+    },
+    "giveup": {
+        "$__mpe_code": {
+            "position": {
+                "x": 940,
+                "y": 901
+            }
+        },
+        "max_hit": 2,
+        "timeout": 5000
     }
 }
