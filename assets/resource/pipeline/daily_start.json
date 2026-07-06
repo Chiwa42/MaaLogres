@@ -1,0 +1,409 @@
+{
+    "$__mpe_config_新建Pipeline1": {
+        "$__mpe_code": {
+            "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "savedViewport": {
+                "x": -884,
+                "y": 183,
+                "zoom": 0.86
+            },
+            "filename": "新建Pipeline1",
+            "version": "v1.7.3"
+        }
+    },
+    "daily_start": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "城下町"
+                ]
+            }
+        },
+        "next": [
+            "click: クエストボード"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 78
+            }
+        }
+    },
+    "click: イベント": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "event_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: デイリー"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 972,
+                "y": 81
+            }
+        }
+    },
+    "click: デイリー": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/daily_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: 爽やか！あうらレッスン"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 81
+            }
+        }
+    },
+    "click: 爽やか！あうらレッスン": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: 武神あうらの特訓",
+            "click: あうらの稽古"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 63
+            }
+        }
+    },
+    "click: 武神あうらの特訓": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 301
+            }
+        }
+    },
+    "click: あうらの稽古": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    " daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 45
+            }
+        }
+    },
+    "click: yes": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "yes.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 74
+            }
+        }
+    },
+    "click: go": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "go.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 92
+            }
+        }
+    },
+    "click: もどる": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "event_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: イベント"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 12
+            }
+        }
+    },
+    "click: クエストボード": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "quest_board.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: イベント"
+        ],
+        "on_error": [
+            "click: もどる"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 65
+            }
+        }
+    },
+    "daily_common_start": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "城下町"
+                ]
+            }
+        },
+        "next": [
+            "click: quest_board_common"
+        ]
+    },
+    "click: quest_board_common": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "quest_board.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: event_category_common"
+        ],
+        "on_error": [
+            "click: event_category_common"
+        ]
+    },
+    "click: event_category_common": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "event_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "daily_start_v2",
+            "time_limited_start",
+            "special_start"
+        ]
+    },
+    "daily_start_v2": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/daily_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: daily_lesson_choice"
+        ]
+    },
+    "click: daily_lesson_choice": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: daily_lesson_war_god",
+            "click: daily_lesson_training"
+        ]
+    },
+    "click: daily_lesson_war_god": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes_v2"
+        ]
+    },
+    "click: daily_lesson_training": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: yes_v2"
+        ]
+    },
+    "time_limited_start": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "timeLimited_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go_v2"
+        ]
+    },
+    "special_start": {
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "special_category.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go_v2"
+        ]
+    },
+    "click: yes_v2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "yes.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go_v2"
+        ]
+    },
+    "click: go_v2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "go.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    }
+}
