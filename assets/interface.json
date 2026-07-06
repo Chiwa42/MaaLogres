@@ -36,54 +36,8 @@
     },
     "task": [
         {
-            "name": "Daily - War God Aura Special Training",
-            "entry": "daily_common_entry",
-            "option": [
-                "daily_lesson_set"
-            ]
-        },
-        {
-            "name": "Daily - Aura Training",
-            "entry": "daily_common_entry",
-            "option": [
-                "daily_lesson_set"
-            ]
-        },
-        {
-            "name": "Time Limited",
-            "entry": "time_limited_entry"
-        },
-        {
-            "name": "Special",
-            "entry": "special_entry"
+            "name": "Daily Start",
+            "entry": "daily_start"
         }
-    ],
-    "option": {
-        "daily_lesson_set": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "war_god",
-                    "pipeline_override": {
-                        "click: daily_lesson_choice_entry": {
-                            "next": [
-                                "click: daily_lesson_war_god_entry"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "name": "aura_training",
-                    "pipeline_override": {
-                        "click: daily_lesson_choice_entry": {
-                            "next": [
-                                "click: daily_lesson_training_entry"
-                            ]
-                        }
-                    }
-                }
-            ],
-            "default_case": "war_god"
-        }
-    }
+    ]
 }
