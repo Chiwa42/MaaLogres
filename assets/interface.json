@@ -6,7 +6,7 @@
     "license": "MIT",
     "welcome": "Welcome to MaaLogres",
     "github": "https://github.com/Chiwa42/MaaLogres",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "controller": [
         {
             "name": "Win32",
