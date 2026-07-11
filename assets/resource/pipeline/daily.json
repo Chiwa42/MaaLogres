@@ -1,11 +1,5 @@
 {
     "click: back": {
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 340
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -34,12 +28,6 @@
         }
     },
     "click: daily": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 377
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -62,12 +50,6 @@
         }
     },
     "click: daily_yes": {
-        "$__mpe_code": {
-            "position": {
-                "x": 12,
-                "y": 12
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -90,12 +72,6 @@
         }
     },
     "click: event": {
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 362
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -118,12 +94,6 @@
         }
     },
     "click: go": {
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 59
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -143,12 +113,6 @@
         }
     },
     "click: quest board": {
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 372
-            }
-        },
         "action": {
             "type": "Click"
         },
@@ -165,12 +129,6 @@
         }
     },
     "daily_start": {
-        "$__mpe_code": {
-            "position": {
-                "x": 12,
-                "y": 387
-            }
-        },
         "next": [
             "click: quest board"
         ],
