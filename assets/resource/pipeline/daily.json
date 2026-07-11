@@ -1,4 +1,12 @@
 {
+    "$__mpe_anchor_series_entry_daily": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1638,
+                "y": 424
+            }
+        }
+    },
     "$__mpe_config_daily": {
         "$__mpe_code": {
             "coordinateMode": "absolute-v1",
@@ -6,12 +14,12 @@
             "filename": "daily",
             "isDeleted": true,
             "isModifiedExternally": false,
-            "lastSyncTime": 1783792633076,
+            "lastSyncTime": 1783796267098,
             "prefix": "",
             "savedViewport": {
-                "x": 270,
-                "y": 26,
-                "zoom": 0.78
+                "x": 312,
+                "y": 164,
+                "zoom": 0.6
             },
             "version": "v1.7.3"
         }
@@ -20,7 +28,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 652,
-                "y": 12
+                "y": 340
             }
         },
         "action": {
@@ -54,12 +62,15 @@
         "$__mpe_code": {
             "position": {
                 "x": 1292,
-                "y": 49
+                "y": 377
             }
         },
         "action": {
             "type": "Click"
         },
+        "next": [
+            "[Anchor]series_entry"
+        ],
         "recognition": {
             "param": {
                 "roi": [
@@ -78,14 +89,13 @@
     "click: daily_yes": {
         "$__mpe_code": {
             "position": {
-                "x": 319,
-                "y": 468
+                "x": 12,
+                "y": 12
             }
         },
         "action": {
             "type": "Click"
         },
-        "anchor": "click: daily_yes",
         "next": [
             "click: go"
         ],
@@ -108,7 +118,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 972,
-                "y": 34
+                "y": 362
             }
         },
         "action": {
@@ -135,8 +145,8 @@
     "click: go": {
         "$__mpe_code": {
             "position": {
-                "x": 662,
-                "y": 500
+                "x": 332,
+                "y": 59
             }
         },
         "action": {
@@ -161,7 +171,7 @@
         "$__mpe_code": {
             "position": {
                 "x": 332,
-                "y": 44
+                "y": 372
             }
         },
         "action": {
@@ -183,12 +193,25 @@
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 87
+                "y": 387
             }
         },
-        "anchor": "daily_start",
         "next": [
             "click: quest board"
-        ]
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    328,
+                    48,
+                    66,
+                    34
+                ],
+                "template": [
+                    "town_name.png"
+                ]
+            },
+            "type": "FeatureMatch"
+        }
     }
 }

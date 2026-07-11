@@ -1,0 +1,157 @@
+{
+    "$__mpe_anchor_series_target_RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 110
+            }
+        }
+    },
+    "$__mpe_config_RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "coordinateMode": "absolute-v1",
+            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\RefreshingAuraLesson.json",
+            "filename": "RefreshingAuraLesson",
+            "isDeleted": true,
+            "isModifiedExternally": false,
+            "lastSyncTime": 1783796277902,
+            "prefix": "",
+            "savedViewport": {
+                "x": 480,
+                "y": 61,
+                "zoom": 0.73
+            },
+            "version": "v1.7.3"
+        }
+    },
+    "$__mpe_external_click: daily_yes_RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 641
+            }
+        }
+    },
+    "$__mpe_external_daily_start_RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "position": {
+                "x": 882,
+                "y": 108
+            }
+        }
+    },
+    "click: AuraTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 542
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: daily_yes"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    168,
+                    301,
+                    237,
+                    40
+                ],
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 12
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[Anchor]series_target"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: WarGodAuraSpecialTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 860
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: daily_yes"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    167,
+                    223,
+                    236,
+                    55
+                ],
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "daily: AuraTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 562,
+                "y": 323
+            }
+        },
+        "anchor": {
+            "series_entry": "click: RefreshingAuraLesson",
+            "series_target": "click: AuraTraining"
+        },
+        "next": [
+            "daily_start"
+        ]
+    },
+    "daily: WarGodAuraSpecialTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 562,
+                "y": 12
+            }
+        },
+        "anchor": {
+            "series_entry": "click: RefreshingAuraLesson",
+            "series_target": "click: WarGodAuraSpecialTraining"
+        },
+        "next": [
+            "daily_start"
+        ]
+    }
+}
