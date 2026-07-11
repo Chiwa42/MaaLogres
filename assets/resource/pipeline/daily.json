@@ -6,12 +6,12 @@
             "filename": "daily",
             "isDeleted": true,
             "isModifiedExternally": false,
-            "lastSyncTime": 1783791516365,
+            "lastSyncTime": 1783791528857,
             "prefix": "",
             "savedViewport": {
-                "x": 387,
-                "y": 409,
-                "zoom": 0.54
+                "x": 340,
+                "y": 263,
+                "zoom": 0.55
             },
             "version": "v1.7.3"
         }
@@ -132,6 +132,7 @@
                 "y": 87
             }
         },
+        "anchor": "daily_start",
         "next": [
             "click: quest board"
         ]

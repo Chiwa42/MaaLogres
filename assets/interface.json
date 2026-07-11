@@ -34,6 +34,13 @@
             "./agent/main.py"
         ]
     },
+    "group": [
+        {
+            "name": "daily",
+            "label": "Daily",
+            "default_expand": true
+        }
+    ],
     "task": [
         {
             "name": "Daily - AuraTraining",
