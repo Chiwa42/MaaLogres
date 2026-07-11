@@ -6,12 +6,12 @@
             "filename": "daily",
             "isDeleted": true,
             "isModifiedExternally": false,
-            "lastSyncTime": 1783791528857,
+            "lastSyncTime": 1783792633076,
             "prefix": "",
             "savedViewport": {
-                "x": 340,
-                "y": 263,
-                "zoom": 0.55
+                "x": 270,
+                "y": 26,
+                "zoom": 0.78
             },
             "version": "v1.7.3"
         }
@@ -75,6 +75,35 @@
             "type": "FeatureMatch"
         }
     },
+    "click: daily_yes": {
+        "$__mpe_code": {
+            "position": {
+                "x": 319,
+                "y": 468
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "anchor": "click: daily_yes",
+        "next": [
+            "click: go"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    100,
+                    481,
+                    123,
+                    47
+                ],
+                "template": [
+                    "yes.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
     "click: event": {
         "$__mpe_code": {
             "position": {
@@ -101,6 +130,31 @@
                 ]
             },
             "type": "FeatureMatch"
+        }
+    },
+    "click: go": {
+        "$__mpe_code": {
+            "position": {
+                "x": 662,
+                "y": 500
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    300,
+                    680,
+                    123,
+                    49
+                ],
+                "template": [
+                    "go.png"
+                ]
+            },
+            "type": "TemplateMatch"
         }
     },
     "click: quest board": {

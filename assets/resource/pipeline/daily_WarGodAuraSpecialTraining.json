@@ -1,21 +1,32 @@
 {
+    "$__mpe_anchor_click: daily_yes_daily_WarGodAuraSpecialTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1319,
+                "y": 91
+            }
+        }
+    },
     "$__mpe_anchor_daily_start_daily_WarGodAuraSpecialTraining": {
         "$__mpe_code": {
             "position": {
-                "x": 332,
-                "y": 119
+                "x": 372,
+                "y": 121
             }
         }
     },
     "$__mpe_config_daily_WarGodAuraSpecialTraining": {
         "$__mpe_code": {
             "coordinateMode": "absolute-v1",
+            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily_WarGodAuraSpecialTraining.json",
             "filename": "daily_WarGodAuraSpecialTraining",
+            "isDeleted": true,
+            "lastSyncTime": 1783791539756,
             "prefix": "",
             "savedViewport": {
-                "x": -73,
-                "y": 173,
-                "zoom": 0.94
+                "x": 78,
+                "y": 251,
+                "zoom": 0.44
             },
             "version": "v1.7.3"
         }
@@ -59,7 +70,7 @@
             "type": "Click"
         },
         "next": [
-            "click: yes"
+            "[Anchor]click: daily_yes"
         ],
         "recognition": {
             "param": {
@@ -71,59 +82,6 @@
                 ],
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
-                ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: go": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1602,
-                "y": 42
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "recognition": {
-            "param": {
-                "roi": [
-                    300,
-                    680,
-                    123,
-                    49
-                ],
-                "template": [
-                    "go.png"
-                ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: yes": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1282,
-                "y": 23
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "click: go"
-        ],
-        "recognition": {
-            "param": {
-                "roi": [
-                    100,
-                    481,
-                    123,
-                    47
-                ],
-                "template": [
-                    "yes.png"
                 ]
             },
             "type": "TemplateMatch"
