@@ -1,6 +1,9 @@
 # docs
 docs/node_modules
 docs/.vuepress/.temp
+.skill/
+.nicegui
+
 # Prerequisites
 *.d
 

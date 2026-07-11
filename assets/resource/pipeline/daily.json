@@ -1,32 +1,24 @@
 {
     "$__mpe_config_daily": {
         "$__mpe_code": {
-            "coordinateMode": "absolute-v1",
-            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
-            "filename": "daily",
-            "isDeleted": true,
-            "isModifiedExternally": false,
-            "lastSyncTime": 1783352506191,
             "prefix": "",
+            "coordinateMode": "absolute-v1",
+            "lastSyncTime": 1783789201262,
+            "isModifiedExternally": false,
+            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
+            "isDeleted": true,
             "savedViewport": {
-                "x": 26,
-                "y": -382,
-                "zoom": 0.81
+                "x": 14,
+                "y": 208,
+                "zoom": 0.54
             },
+            "filename": "daily",
             "version": "v1.7.3"
         }
     },
     "click: go": {
-        "$__mpe_code": {
-            "position": {
-                "x": 2252,
-                "y": 74
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     300,
@@ -37,24 +29,21 @@
                 "template": [
                     "go.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: yes": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1932,
-                "y": 55
             }
         },
         "action": {
             "type": "Click"
         },
-        "next": [
-            "click: go"
-        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2572,
+                "y": 297
+            }
+        }
+    },
+    "click: yes": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     100,
@@ -65,24 +54,24 @@
                 "template": [
                     "yes.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: あうらの稽古": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1612,
-                "y": 346
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: yes"
+            "click: go"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 280
+            }
+        }
+    },
+    "click: AuraTraining": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     168,
@@ -93,25 +82,25 @@
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: もどる": {
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 391
             }
         },
         "action": {
             "type": "Click"
         },
-        "max_hit": 3,
         "next": [
-            "click: イベント"
+            "click: yes"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 551
+            }
+        }
+    },
+    "click: back": {
+        "max_hit": 2,
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     10,
@@ -122,27 +111,24 @@
                 "template": [
                     "back.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: イベント": {
-        "$__mpe_code": {
-            "position": {
-                "x": 652,
-                "y": 360
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: デイリー"
+            "click: event"
         ],
-        "on_error": [
-            "click: もどる"
-        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 367
+            }
+        }
+    },
+    "click: event": {
         "recognition": {
+            "type": "FeatureMatch",
             "param": {
                 "roi": [
                     66,
@@ -153,80 +139,51 @@
                 "template": [
                     "event_category.png"
                 ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "click: クエストボード": {
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 651
             }
         },
         "action": {
             "type": "Click"
         },
-        "max_hit": 5,
         "next": [
-            "click: イベント"
+            "click: daily"
         ],
-        "on_error": [
-            "click: クエストボード_retry"
-        ],
-        "recognition": {
-            "param": {
-                "template": [
-                    "quest_board.png",
-                    "quest_board_2.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        },
-        "timeout": 5000
-    },
-    "click: クエストボード_retry": {
-        "$__mpe_code": {
-            "position": {
-                "x": 610,
-                "y": 729
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "max_hit": 2,
-        "next": [
-            "click: クエストボード"
-        ],
-        "on_error": [
-            "giveup"
-        ],
-        "recognition": {
-            "param": {
-                "template": [
-                    "quest_board.png",
-                    "quest_board_2.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        },
-        "timeout": 5000
-    },
-    "click: デイリー": {
         "$__mpe_code": {
             "position": {
                 "x": 972,
-                "y": 59
+                "y": 286
+            }
+        }
+    },
+    "click: quest board": {
+        "max_hit": 2,
+        "recognition": {
+            "type": "FeatureMatch",
+            "param": {
+                "template": [
+                    "quest_board.png"
+                ]
             }
         },
         "action": {
             "type": "Click"
         },
+        "timeout": 5000,
         "next": [
-            "click: 爽やか！あうらレッスン"
+            "click: event"
         ],
+        "on_error": [
+            "click: back"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 260
+            }
+        }
+    },
+    "click: daily": {
         "recognition": {
+            "type": "FeatureMatch",
             "param": {
                 "roi": [
                     23,
@@ -237,24 +194,24 @@
                 "template": [
                     "daily/daily_category.png"
                 ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "click: 武神あうらの特訓": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1612,
-                "y": 12
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: yes"
+            "click: RefreshingAuraLesson"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1292,
+                "y": 286
+            }
+        }
+    },
+    "click: WarGodAuraSpecialTraining": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     167,
@@ -265,25 +222,24 @@
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
                 ]
-            },
-            "type": "TemplateMatch"
-        }
-    },
-    "click: 爽やか！あうらレッスン": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 48
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: 武神あうらの特訓",
-            "click: あうらの稽古"
+            "click: yes"
         ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1932,
+                "y": 228
+            }
+        }
+    },
+    "click: RefreshingAuraLesson": {
         "recognition": {
+            "type": "TemplateMatch",
             "param": {
                 "roi": [
                     0,
@@ -294,30 +250,32 @@
                 "template": [
                     "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
                 ]
-            },
-            "type": "TemplateMatch"
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: WarGodAuraSpecialTraining",
+            "click: AuraTraining"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1612,
+                "y": 268
+            }
         }
     },
     "daily_start": {
+        "timeout": 5000,
+        "next": [
+            "click: quest board"
+        ],
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 722
+                "y": 305
             }
-        },
-        "next": [
-            "click: クエストボード"
-        ],
-        "timeout": 5000
-    },
-    "giveup": {
-        "$__mpe_code": {
-            "position": {
-                "x": 940,
-                "y": 901
-            }
-        },
-        "max_hit": 2,
-        "timeout": 5000
+        }
     }
 }
