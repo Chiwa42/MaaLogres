@@ -1,29 +1,4 @@
 {
-    "$__mpe_anchor_series_entry_daily": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1638,
-                "y": 424
-            }
-        }
-    },
-    "$__mpe_config_daily": {
-        "$__mpe_code": {
-            "coordinateMode": "absolute-v1",
-            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
-            "filename": "daily",
-            "isDeleted": true,
-            "isModifiedExternally": false,
-            "lastSyncTime": 1783796267098,
-            "prefix": "",
-            "savedViewport": {
-                "x": 312,
-                "y": 164,
-                "zoom": 0.6
-            },
-            "version": "v1.7.3"
-        }
-    },
     "click: back": {
         "$__mpe_code": {
             "position": {
