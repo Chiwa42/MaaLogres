@@ -1,139 +1,143 @@
 {
-    "$__mpe_config_daily": {
+    "$__mpe_anchor_daily_start_daily_AuraTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 54
+            }
+        }
+    },
+    "$__mpe_config_daily_AuraTraining": {
         "$__mpe_code": {
             "coordinateMode": "absolute-v1",
-            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
-            "filename": "daily",
-            "isDeleted": true,
-            "isModifiedExternally": false,
-            "lastSyncTime": 1783791516365,
+            "filename": "daily_AuraTraining",
             "prefix": "",
             "savedViewport": {
-                "x": 387,
-                "y": 409,
-                "zoom": 0.54
+                "x": 337,
+                "y": 205,
+                "zoom": 0.67
             },
             "version": "v1.7.3"
         }
     },
-    "click: back": {
+    "click: AuraTraining": {
         "$__mpe_code": {
             "position": {
-                "x": 652,
-                "y": 12
+                "x": 332,
+                "y": 184
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: event"
+            "click: yes"
         ],
         "recognition": {
             "param": {
                 "roi": [
-                    1,
-                    80,
-                    80,
-                    63
+                    168,
+                    301,
+                    237,
+                    40
                 ],
-                "roi_offset": [
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_AuraTraining.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: RefreshingAuraLesson": {
+        "$__mpe_code": {
+            "position": {
+                "x": 12,
+                "y": 175
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: AuraTraining"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
                     0,
                     0,
                     0,
                     0
                 ],
                 "template": [
-                    "back.png"
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
                 ]
             },
             "type": "TemplateMatch"
         }
     },
-    "click: daily": {
-        "$__mpe_code": {
-            "position": {
-                "x": 1292,
-                "y": 49
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "recognition": {
-            "param": {
-                "roi": [
-                    23,
-                    132,
-                    100,
-                    45
-                ],
-                "template": [
-                    "daily/daily_category.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "click: event": {
+    "click: go": {
         "$__mpe_code": {
             "position": {
                 "x": 972,
-                "y": 34
+                "y": 196
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "recognition": {
+            "param": {
+                "roi": [
+                    300,
+                    680,
+                    123,
+                    49
+                ],
+                "template": [
+                    "go.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: yes": {
+        "$__mpe_code": {
+            "position": {
+                "x": 652,
+                "y": 177
             }
         },
         "action": {
             "type": "Click"
         },
         "next": [
-            "click: daily"
+            "click: go"
         ],
         "recognition": {
             "param": {
                 "roi": [
-                    66,
-                    52,
-                    102,
-                    58
+                    100,
+                    481,
+                    123,
+                    47
                 ],
                 "template": [
-                    "event_category.png"
+                    "yes.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
-    "click: quest board": {
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 44
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "click: back"
-        ],
-        "recognition": {
-            "param": {
-                "template": [
-                    "quest_board.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "daily_start": {
+    "daily: AuraTraining": {
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 87
+                "y": 12
             }
         },
         "next": [
-            "click: quest board"
+            "[Anchor]daily_start"
         ]
     }
 }

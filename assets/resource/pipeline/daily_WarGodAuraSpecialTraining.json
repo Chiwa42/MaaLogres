@@ -1,25 +1,57 @@
 {
-    "$__mpe_config_daily": {
+    "$__mpe_anchor_daily_start_daily_WarGodAuraSpecialTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 332,
+                "y": 119
+            }
+        }
+    },
+    "$__mpe_config_daily_WarGodAuraSpecialTraining": {
         "$__mpe_code": {
             "coordinateMode": "absolute-v1",
-            "filePath": "D:\\MaaLogresRepository\\MaaLogres\\assets\\resource\\pipeline\\daily.json",
-            "filename": "daily",
-            "isDeleted": true,
-            "isModifiedExternally": false,
-            "lastSyncTime": 1783791516365,
+            "filename": "daily_WarGodAuraSpecialTraining",
             "prefix": "",
             "savedViewport": {
-                "x": 387,
-                "y": 409,
-                "zoom": 0.54
+                "x": -73,
+                "y": 173,
+                "zoom": 0.94
             },
             "version": "v1.7.3"
         }
     },
-    "click: back": {
+    "click: RefreshingAuraLesson": {
         "$__mpe_code": {
             "position": {
-                "x": 652,
+                "x": 642,
+                "y": 21
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: WarGodAuraSpecialTraining"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "template": [
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: WarGodAuraSpecialTraining": {
+        "$__mpe_code": {
+            "position": {
+                "x": 962,
                 "y": 12
             }
         },
@@ -27,34 +59,28 @@
             "type": "Click"
         },
         "next": [
-            "click: event"
+            "click: yes"
         ],
         "recognition": {
             "param": {
                 "roi": [
-                    1,
-                    80,
-                    80,
-                    63
-                ],
-                "roi_offset": [
-                    0,
-                    0,
-                    0,
-                    0
+                    167,
+                    223,
+                    236,
+                    55
                 ],
                 "template": [
-                    "back.png"
+                    "daily/RefreshingAuraLesson/daily_RefreshingAuraLesson_WarGodAuraSpecialTraining.png"
                 ]
             },
             "type": "TemplateMatch"
         }
     },
-    "click: daily": {
+    "click: go": {
         "$__mpe_code": {
             "position": {
-                "x": 1292,
-                "y": 49
+                "x": 1602,
+                "y": 42
             }
         },
         "action": {
@@ -63,77 +89,55 @@
         "recognition": {
             "param": {
                 "roi": [
-                    23,
-                    132,
+                    300,
+                    680,
+                    123,
+                    49
+                ],
+                "template": [
+                    "go.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "click: yes": {
+        "$__mpe_code": {
+            "position": {
+                "x": 1282,
+                "y": 23
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "click: go"
+        ],
+        "recognition": {
+            "param": {
+                "roi": [
                     100,
-                    45
+                    481,
+                    123,
+                    47
                 ],
                 "template": [
-                    "daily/daily_category.png"
+                    "yes.png"
                 ]
             },
-            "type": "FeatureMatch"
+            "type": "TemplateMatch"
         }
     },
-    "click: event": {
-        "$__mpe_code": {
-            "position": {
-                "x": 972,
-                "y": 34
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "click: daily"
-        ],
-        "recognition": {
-            "param": {
-                "roi": [
-                    66,
-                    52,
-                    102,
-                    58
-                ],
-                "template": [
-                    "event_category.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "click: quest board": {
-        "$__mpe_code": {
-            "position": {
-                "x": 332,
-                "y": 44
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
-            "click: back"
-        ],
-        "recognition": {
-            "param": {
-                "template": [
-                    "quest_board.png"
-                ]
-            },
-            "type": "FeatureMatch"
-        }
-    },
-    "daily_start": {
+    "daily: WarGodAuraSpecialTraining": {
         "$__mpe_code": {
             "position": {
                 "x": 12,
-                "y": 87
+                "y": 61
             }
         },
         "next": [
-            "click: quest board"
+            "[Anchor]daily_start"
         ]
     }
 }

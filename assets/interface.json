@@ -36,8 +36,40 @@
     },
     "task": [
         {
-            "name": "Daily Start",
-            "entry": "daily_start"
+            "name": "Daily - AuraTraining",
+            "entry": "daily: AuraTraining",
+            "default_check": true,
+            "group": [
+                "daily"
+            ]
+        },
+        {
+            "name": "Daily - WarGodAuraSpecialTraining",
+            "entry": "daily: WarGodAuraSpecialTraining",
+            "default_check": false,
+            "group": [
+                "daily"
+            ]
+        },
+        {
+            "name": "MyTask1",
+            "entry": "MyTask1"
+        },
+        {
+            "name": "MyTask2",
+            "entry": "MyTask2"
+        },
+        {
+            "name": "MyTask3",
+            "entry": "MyTask3"
+        },
+        {
+            "name": "MyTask4",
+            "entry": "MyTask4"
+        },
+        {
+            "name": "OcrTask",
+            "entry": "OcrTask"
         }
     ]
 }
